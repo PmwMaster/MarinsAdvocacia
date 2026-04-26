@@ -1265,6 +1265,7 @@ p {
     .urgency-content { flex-direction: column; text-align: center; }
     .urgency-icons { justify-content: center; }
     .contact-container { grid-template-columns: 1fr; }
+    .contact-media-block { grid-template-columns: 1fr; }
     .about-container { grid-template-columns: 1fr; }
     .about-experience-badge { right: 20px; bottom: 20px; }
     .hero-overlay {
