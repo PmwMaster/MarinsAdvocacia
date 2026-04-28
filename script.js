@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startCounting = () => {
         stats.forEach(stat => {
-            const target = +stat.getAttribute('data-target');
+            const targetAttr = stat.getAttribute('data-target');
+            const target = parseInt(targetAttr.replace(/\D/g, '')) || 0; // Pega apenas os números
+            const suffix = targetAttr.replace(/[0-9]/g, ''); // Pega o que não for número (+, h, etc)
             const duration = 2500;
             const startTime = performance.now();
             
@@ -50,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const easedProgress = easeOutQuart(progress);
                 const current = Math.round(easedProgress * target);
                 
-                stat.innerText = current;
+                stat.innerText = current + suffix;
                 
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
-                    stat.innerText = target;
+                    stat.innerText = targetAttr;
                 }
             };
             requestAnimationFrame(updateCounter);

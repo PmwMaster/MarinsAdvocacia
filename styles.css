@@ -260,8 +260,10 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-image: url('fotos/sandro11.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center; /* Voltando ao original */
+    background-repeat: no-repeat;
     padding-top: 80px;
     color: var(--white);
 }
@@ -479,6 +481,9 @@ p {
 
 .about-image {
     width: 100%;
+    height: auto;
+    aspect-ratio: auto; /* Mantém a proporção real da foto */
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
@@ -904,11 +909,13 @@ p {
 
 .contact-image-small {
     width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-bottom: 4px solid var(--gold);
     transition: transform 0.5s ease;
-    object-fit: cover;
 }
 
 .contact-image-small:hover {
