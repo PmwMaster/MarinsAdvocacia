@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sandromarins.com.br/sitemap.xml
+Sitemap: https://drsandromarins.com.br/sitemap.xml
